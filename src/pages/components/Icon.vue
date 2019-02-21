@@ -123,7 +123,6 @@ export default {
     line-height .44rem
     color: $darkTextColor
     text-align center
-    font-size .28rem
     ellipse()
 .icon-swiper-pagination
   position static
@@ -147,7 +146,6 @@ export default {
     text-align center
     border-top:1px solid $borderColor
     border-right 1px solid $borderColor
-    font-size .28rem
     i
       margin-right 4px
   div:last-of-type

@@ -39,6 +39,11 @@ export default {
   height:0;
   overflow:hidden;
   padding-bottom:26.5%
+  >>> .swiper-pagination-bullet
+    display inline-block
+    margin-right .08rem
+    width 6px
+    height 6px
   >>> .swiper-pagination-bullet-active
     background #fff
   img
