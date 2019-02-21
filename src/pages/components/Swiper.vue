@@ -25,7 +25,9 @@ export default {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
-        loop: true
+        loop: true,
+        scrollbarHide: true,
+        autoplay: 2000
       }
     }
   }
@@ -33,13 +35,13 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-  .wrapper >>> .swiper-pagination-bullet-active
+.wrapper
+  width:100%;
+  height:0;
+  overflow:hidden;
+  padding-bottom:26.5%
+  >>> .swiper-pagination-bullet-active
     background #fff
-  .wrapper
+  img
     width:100%;
-    height:0;
-    overflow:hidden;
-    padding-bottom:31.25%;
-    img
-      width:100%;
 </style>
