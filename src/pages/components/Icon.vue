@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="swiperOption"  autoplay="false">
       <swiper-slide v-for="item in pages" :key="item.title">
         <div v-for="(it,index) in item" :key="index" class="icon">
           <div class="icon-img">
@@ -10,6 +10,11 @@
         </div>
       </swiper-slide>
     </swiper>
+    <div class="icon-swiper-pagination"  slot="pagination"></div>
+    <div class="address">
+      <div><i class="iconfont">&#xe647;</i>定位失败</div>
+      <div><i class="iconfont">&#xe76c;</i>必游榜单</div>
+    </div>
   </div>
 </template>
 
@@ -57,7 +62,12 @@ export default {
       {
         icon: 'http://img1.qunarzz.com/piao/fusion/1803/87/20656da0ac042002.png',
         title: '西岭雪山'
-      }]
+      }],
+      swiperOption: {
+        pagination: '.icon-swiper-pagination',
+        loop: true,
+        autoplay: false
+      }
     }
   },
   computed: {
@@ -79,9 +89,12 @@ export default {
 <style scoped lang="stylus">
 @import '~styles/varibies.styl'
 @import '~styles/mixins.styl'
-.icons >>> .swiper-container
-  height :0
-  padding-bottom 50%
+.icons
+  overflow hidden
+  background white
+  >>> .swiper-container
+    height :0
+    padding-bottom 50%
 .icon
   float: left
   width 25%
@@ -110,6 +123,33 @@ export default {
     line-height .44rem
     color: $darkTextColor
     text-align center
+    font-size .28rem
     ellipse()
-
+.icon-swiper-pagination
+  position static
+  text-align center
+  height .46rem
+  line-height .40rem
+  >>> .swiper-pagination-bullet
+    display inline-block
+    margin-right 5px
+    width 6px
+    height 6px
+  >>> .swiper-pagination-bullet-active
+    background:rgba(0,175,190,.8)
+.address
+  height .98rem
+  div
+    box-sizing border-box
+    float left
+    width 50%
+    line-height .98rem
+    text-align center
+    border-top:1px solid $borderColor
+    border-right 1px solid $borderColor
+    font-size .28rem
+    i
+      margin-right 4px
+  div:last-of-type
+    border-right none
 </style>
