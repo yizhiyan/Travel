@@ -92,7 +92,8 @@ export default {
 .icons
   overflow hidden
   background white
-  >>> .swiper-container
+  margin-top .1rem
+>>> .swiper-container
     height :0
     padding-bottom 50%
 .icon
