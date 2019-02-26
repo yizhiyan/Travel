@@ -93,4 +93,6 @@ export default {
   .iconfont
     position relative
     font-size .24rem
+  strong
+    font-weight bold!important
 </style>
