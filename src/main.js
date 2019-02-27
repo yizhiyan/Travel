@@ -3,6 +3,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
+import vueCookie from 'vue-cookies'
 
 import 'styles/reset.css'
 import 'styles/border.css'
@@ -12,6 +13,8 @@ import 'swiper/dist/css/swiper.css'
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
+Vue.use(vueCookie)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

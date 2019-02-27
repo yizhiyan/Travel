@@ -4,8 +4,10 @@
       <div class="iconfont back-icon">&#xe624;</div>
     </div>
     <div class="header-input">
+      <router-link to="/search">
       <span class="iconfont">&#xe632;</span>
-      输入城市/景点/
+      输入城市/景点/游玩主题
+      </router-link>
     </div>
     <div class="header-right">
       城市
@@ -44,6 +46,8 @@ export default {
     line-height:.64rem
     color: #ccc
     padding-left:.2rem
+    a
+      color: #e4e7ea
   .header-right
     width:1.24rem
     float: right

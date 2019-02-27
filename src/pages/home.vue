@@ -11,13 +11,13 @@
 </template>
 
 <script>
-import HomeHeader from './components/Header'
-import HomeSwiper from './components/Swiper'
-import HomeIcons from './components/Icon'
-import HomePopular from './components/Popular'
-import HomeGuess from './components/Guess'
-import HomeWeekend from './components/Weekend'
-import HomeFooter from './components/Footer'
+import HomeHeader from './home/Header'
+import HomeSwiper from './home/Swiper'
+import HomeIcons from './home/Icon'
+import HomePopular from './home/Popular'
+import HomeGuess from './home/Guess'
+import HomeWeekend from './home/Weekend'
+import HomeFooter from './home/Footer'
 
 export default {
   name: 'home',
