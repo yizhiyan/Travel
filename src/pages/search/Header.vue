@@ -19,7 +19,10 @@ export default {
       this.$router.go(-1)
     },
     Search () {
-      this.$emit('addCookie', this.SearchContext)
+      let cont = this.SearchContext
+      if (cont) {
+        this.$emit('addCookie', cont)
+      }
     }
   }
 }
